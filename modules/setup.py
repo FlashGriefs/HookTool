@@ -1,9 +1,7 @@
 import os
 
 def setup():
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    file_path = os.path.join(script_dir, 'config.ini')
-    if not os.path.exists(file_path):
+    if not os.path.exists('config.ini'):
         with open('config.ini', 'w') as file:
             file.write("""[MAIN]
 webhook = YOUR_WEBHOOK

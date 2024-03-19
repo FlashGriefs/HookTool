@@ -1,5 +1,6 @@
 import colorama
 import sys
+import os
 from modules import menu
 from modules import clear
 from modules import settings
@@ -47,7 +48,12 @@ def main():
     except KeyboardInterrupt:
         print(f"\n{grey}[{green}Success{grey}]{red} Exiting.")
         sys.exit(0)
- 
+
+if os.name == 'nt':
+    os.system('title HookTool')
+else:
+    sys.stdout.write(f"\033]0;HookTool\007")
+    sys.stdout.flush()
 setup()
 clear()
 menu()
