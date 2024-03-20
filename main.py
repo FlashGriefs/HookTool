@@ -10,6 +10,8 @@ from modules import delete_webhook
 from modules import change_webhook_name
 from modules import change_webhook_avatar
 from modules import setup
+from modules import send_embeds
+from modules import spam_embed
 
 blue = colorama.Fore.BLUE
 grey = colorama.Fore.LIGHTBLACK_EX
@@ -21,9 +23,11 @@ options = {
     1: settings,
     2: send_messages,
     3: spam_message,
-    4: delete_webhook,
-    5: change_webhook_name,
-    6: change_webhook_avatar,
+    4: send_embeds,
+    5: spam_embed,
+    6: delete_webhook,
+    7: change_webhook_name,
+    8: change_webhook_avatar,
 }
 
 def main():
@@ -31,9 +35,11 @@ def main():
         print(f"""            {grey}[{green}1{grey}]{white} Settings
             {grey}[{green}2{grey}]{white} Send Messages
             {grey}[{green}3{grey}]{white} Spam Message
-            {grey}[{green}4{grey}]{white} Delete Webhook
-            {grey}[{green}5{grey}]{white} Change Webhook's Name
-            {grey}[{green}6{grey}]{white} Change Webhook's Avatar
+            {grey}[{green}4{grey}]{white} Send Embed Messages
+            {grey}[{green}5{grey}]{white} Spam Embed Message
+            {grey}[{green}6{grey}]{white} Delete Webhook
+            {grey}[{green}7{grey}]{white} Change Webhook's Name
+            {grey}[{green}8{grey}]{white} Change Webhook's Avatar
             """)
         option = int(input(f"{grey}[{green}Choice{grey}] {white}"))
         if option in options:
