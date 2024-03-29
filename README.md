@@ -1,5 +1,5 @@
 # HookTool
-A simple webhook management tool.
+A simple webhook management tool. All features work for discord webhooks and most features work for guilded webhooks.
 
 # Features
 - Send messages from webhook
